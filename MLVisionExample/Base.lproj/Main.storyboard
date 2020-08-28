@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YXl-5B-mBF">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="kPU-gK-lh6">
+            <objects>
+                <viewController id="YXl-5B-mBF" customClass="CameraViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qO2-JB-Jc4"/>
+                        <viewControllerLayoutGuide type="bottom" id="7NG-lt-hPa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bWY-Sx-TCF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mn2-dQ-YNu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="6"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="6" id="xIK-Vd-Y6R"/>
+                                </constraints>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mn2-dQ-YNu" secondAttribute="trailing" id="EB2-tA-kM2"/>
+                            <constraint firstItem="mn2-dQ-YNu" firstAttribute="top" secondItem="qO2-JB-Jc4" secondAttribute="bottom" id="Ldx-Kl-J3W"/>
+                            <constraint firstItem="mn2-dQ-YNu" firstAttribute="leading" secondItem="bWY-Sx-TCF" secondAttribute="leading" id="qK3-Jn-xfl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8dJ-Hr-2St">
+                        <nil key="title"/>
+                        <rightBarButtonItems>
+                            <barButtonItem image="switch_camera" id="kXj-bT-GY0" userLabel="Switch Camera Button">
+                                <connections>
+                                    <action selector="switchCamera:" destination="YXl-5B-mBF" id="sFo-ar-LIv"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Detectors" id="jrI-gv-coB" userLabel="Detectors Button">
+                                <connections>
+                                    <action selector="selectDetector:" destination="YXl-5B-mBF" id="AjI-Jr-07c"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="downloadProgressView" destination="mn2-dQ-YNu" id="lNZ-Xz-0FT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tub-Fx-HUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1199" y="134"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="switch_camera" width="36" height="36"/>
+    </resources>
+</document>
